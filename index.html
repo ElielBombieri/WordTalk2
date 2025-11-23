@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldTalk - Fale com o mundo, fale com confiança</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body onload="listar()">
+
+    <header>
+        <div class="container">
+            <img src="imagens/logo.png" alt="Logomarca WorldTalk" id="logo">
+            <nav>
+                <a href="#sobre">Sobre</a>
+                <a href="#profissionais">Profissionais</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#clientes">Clientes</a>
+                <a href="#blog">Blog</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre" class="container">
+            <h2>Sobre a Empresa</h2>
+            <p>A WorldTalk Ensino de Idiomas Ltda., com nome fantasia WorldTalk, foi fundada em 2018 com o propósito de aproximar pessoas do mundo através do aprendizado de idiomas. A escola nasceu da paixão de professores por diferentes culturas e línguas, criando um espaço acolhedor e moderno, onde cada aluno aprende de forma prática e personalizada.</p>
+            <p>Ao longo dos anos, a WorldTalk tornou-se referência no ensino de inglês, espanhol, francês, alemão e mandarim, oferecendo metodologias interativas, tecnologia aplicada e professores altamente capacitados.</p>
+            <h3>Missão</h3>
+            <p>Ensinar idiomas de forma eficaz, estimulando a comunicação e a conexão cultural.</p>
+            <h3>Visão</h3>
+            <p>Ser referência no ensino de idiomas no Brasil até 2030.</p>
+            <h3>Valores</h3>
+            <p>Qualidade, Inclusão, Inovação, Empatia e Diversidade Cultural.</p>
+        </section>
+
+        <section id="profissionais" class="container">
+            <h2>Profissionais</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="imagens/rafael_fake.jpg" alt="Foto de Rafael Rodrigues">
+                    <h3>Rafael Rodrigues</h3>
+                    <p>Coordenador Pedagógico e Professor de Inglês</p>
+                </div>
+                <div class="card">
+                    <img src="imagens/joaomendes.webp" alt="Foto de João Carlos Mendes">
+                    <h3>João Carlos Mendes</h3>
+                    <p>Professor de Espanhol e Francês</p>
+                </div>
+                <div class="card">
+                    <img src="imagens/mariana.webp" alt="Foto de Mariana Souza">
+                    <h3>Mariana Souza</h3>
+                    <p>Professora de Alemão e Mandarim</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="container">
+            <h2>Serviços</h2>
+            <article class="servico">
+                <h3>Curso de Inglês</h3>
+                <p>Foco em conversação, gramática e compreensão auditiva, do iniciante ao avançado.</p>
+                <div class="imagens-servico">
+                    <img src="imagens/aula_ingles1.jpg" alt="Aula de inglês 1">
+                    <img src="imagens/aula_ingles2.jpg" alt="Aula de inglês 2">
+                    <img src="imagens/aula_ingles1.jpg" alt="Aula de inglês 1">
+                </div>
+            </article>
+            <article class="servico">
+                <h3>Curso de Espanhol</h3>
+                <p>Comunicação prática e vocabulário voltado para viagens, negócios e vida cotidiana.</p>
+                <div class="imagens-servico">
+                    <img src="imagens/aula_espanhol1.jpg" alt="Aula de espanhol 1">
+                    <img src="imagens/aula_espanhol2.jpg" alt="Aula de espanhol 2">
+                    <img src="imagens/aula_espanhol1.jpg" alt="Aula de espanhol 1">
+                </div>
+            </article>
+            <article class="servico">
+                <h3>Treinamento Corporativo</h3>
+                <p>Programas sob medida para empresas que desejam aprimorar a comunicação internacional de seus colaboradores.</p>
+                <div class="imagens-servico">
+                    <img src="imagens/coorporativo1.jpg" alt="Treinamento corporativo 1">
+                    <img src="imagens/coorporativo2.jpg" alt="Treinamento corporativo 2">
+                    <img src="imagens/coorporativo1.jpg" alt="Treinamento corporativo 1">
+                </div>
+            </article>
+        </section>
+
+        <section id="clientes" class="container">
+            <h2>Depoimentos de Clientes</h2>
+            <div class="depoimentos-container" id="depoimento-listar">
+            </div>
+            <div class="depoimentos-forms">                
+                <blockquote class="depoimento">
+                    <h2>Faça seu depoimento</h2>
+                    <form class="depoimentoForm" id="depoimentoForm">
+                        <div class="depoimentoChilds mb-3">
+                            <label for="name">Digite seu nome</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="depoimentoChilds mb-3">
+                            <label for="text">Digite seu depoimento</label>
+                            <input class="inputtext" type="text" id="text" required>
+                        </div>
+                        <div class="botao modal-footer">
+                            <button type="button" class="btn btn-info" onclick="cadastro()" data-bs-dismiss="modal">Salvar</button>
+                        </div>
+                    </form>
+                </blockquote>
+            </div>
+        </section>
+
+        <section id="blog" class="container">
+            <h2>Blog</h2>
+            <div class="blog-container">      
+                <article class="post">       
+                    <img src="imagens/motivos.jpeg" alt="Pessoa estudando inglês">
+                    <h3> 
+                        <a href="https://englishlive.ef.com/pt-br/blog/ingles-na-vida-real/motivos-para-aprender-ingles" target="_blank" rel="noopener noreferrer">
+                        5 dicas para aprender inglês mais rápido       
+                        </a>
+                    </h3>
+                    <p>Descubra técnicas simples que podem acelerar sua fluência no inglês e tornar o aprendizado mais divertido.</p>
+                    <small>Por Rafaeli Pinheiro em 01/08/2025 | Fonte: British Council</small>
+                </article>
+                <article class="post">
+                    <img src="imagens/mapa.png" alt="Mapa mundi com destaque para países de lingua espanhola">
+                    <h3> 
+                        <a href="https://www.etcintercambio.com.br/post/por-que-você-deve-aprender-espanhol-para-sua-carreira" target="_blank" rel="noopener noreferrer">     
+                            Por que aprender espanhol pode mudar sua carreira
+                        </a> 
+                    </h3>
+                    <p>O espanhol é a segunda língua mais falada no mundo dos negócios. Veja como aprender pode abrir novas oportunidades profissionais.</p>
+                    <small>Por João Carlos Mendes em 05/08/2025 | Fonte: Open Colleges</small>
+                </article>
+            </div>                             
+        </section>
+        <section class="form">
+            <h1 class="form__titulo">Solicite um Orçamento</h1>
+            <form action="" method="get">
+                <div class="row">
+                    <label for="userName">Nome:</label>
+                    <input class="input__form" id="name-orc" type="text" name="userName" required>
+        
+                    <label for="userNumber">Número de telefone:</label>
+                    <input class="input__form" id="number" type="text" name="userNumber" required>
+
+                    <label for="userEmail">E-mail:</label>
+                    <input class="input__form" id="email" type="email" name="userEmail" required>
+                    
+                    <label for="gender">Gênero</label>
+                    <select id="gender" name="gender">
+                        <option value="S">Selecione uma opção</option>
+                        <option value="F">Feminino</option>
+                        <option value="M">Masculino</option>
+                        <option value="N">Prefiro não informar</option>
+                    </select>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button class="button__form" onclick="enviarOrcamento()">Enviar</button>
+                    <a class="button__form" href="orcamentos.html" target="_blank">Visualizar Orcamentos</a>
+                </div>
+            </form>
+        </section>  
+
+    </main>
+
+    <footer id="contato">
+        <div class="container">
+            <h2>Contato</h2>
+            <p><strong>Endereço:</strong> R. São Miguel do Oeste - Efapi, Chapecó - SC, 89801-000</p>
+            <p><strong>Telefone:</strong> <a href="https://wa.me/5549989167742">(49) 98916-7742 (WhatsApp)</a></p>
+            <p><strong>E-mail:</strong> <a href="mailto:contato@worldtalk.com.br">contato@worldtalk.com.br</a></p>
+            <p class="slogan">"Fale com o mundo, fale com confiança"</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
