@@ -10,6 +10,8 @@ async function listar() {
         tagChild += `<blockquote class="depoimento">
                     <p>“${x.text}”</p>
                     <cite>${x.name} – ${x.date}</cite>
+                    <p>Curtidas ${x.curtidas}</p>
+                    <button class="button__form" onclick="curtir(${x.id})">Curtir</button>
                 </blockquote>`
     }
 
@@ -37,18 +39,42 @@ async function listarOrcamentos() {
         }else{
             gender = 'Opção não informada'
         }
+
+        let resposta;
+        if(x.resposta == 'S'){
+            resposta = 'Contato já respondido';
+        }else if (x.resposta == 'N' || x.resposta == undefined){
+            resposta = 'Contato ainda não respondido';
+        }
+
         tagChild += `
         <div class='orcamento-registro mb-3'>
             <h3>${x.name}</h3>
             <p>${x.number}</p>
             <p>${x.email}</p>
             <p>${gender}</p>
+            <p>${resposta}</p>
+            <button class="button__form" onclick="marcarRespondido(${x.id})">Marcar como respondido</button>
         </div>`
     }
 
     tagDad.innerHTML = tagChild;
 }
 
+
+async function marcarRespondido(id) {
+    let url = `./php/marcarRespondido.php?id=${id}`;
+    let resposta = await fetch(url);
+
+    listarOrcamentos();
+}
+
+async function curtir(id) {
+    let url = `./php/curtir.php?id=${id}`;
+    let resposta = await fetch(url);
+
+    listar();
+}
 
 async function cadastro(){
     let name = document.getElementById('name').value;

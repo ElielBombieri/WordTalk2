@@ -71,7 +71,6 @@ h3 {
     font-size: 1.5em;
 }
 
-/* Profissionais */
 #profissionais .cards-container {
     display: flex;
     justify-content: space-around;
